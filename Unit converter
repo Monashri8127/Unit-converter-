@@ -1,0 +1,24 @@
+def length_converter():
+    print("\nLength Converter (km, m, cm, mm)")
+    value = float(input("Enter value: "))
+    from_unit = input("From unit (km/m/cm/mm): ").lower()
+    to_unit = input("To unit (km/m/cm/mm): ").lower()
+
+    units = {
+        'km': 1000000,
+        'm': 1000,
+        'cm': 10,
+        'mm': 1
+    }
+
+    if from_unit in units and to_unit in units:
+        mm_value = value * units[from_unit]
+        converted = mm_value / units[to_unit]
+        print(f"{value} {from_unit} = {converted} {to_unit}")
+    else:
+        print("Invalid units.")
+
+def weight_converter():
+    print("\nWeight Converter (kg, g, mg)")
+    value = float(input("Enter value: "))
+    from_unit = input("From unit (kg/g/mg): ").# Unit-converter-
